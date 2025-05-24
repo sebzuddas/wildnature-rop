@@ -1,4 +1,4 @@
-import { getPermalink, getAsset } from './utils/permalinks'; // getBlogPermalink removed as it's not used
+// import { getPermalink, getAsset } from './utils/permalinks'; // getBlogPermalink removed as it's not used
 
 export const headerData = {
   links: [
@@ -125,55 +125,46 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    // {
-    //   title: 'Product',
-    //   links: [
-    //     { text: 'Features', href: '#' },
-    //     { text: 'Security', href: '#' },
-    //     { text: 'Team', href: '#' },
-    //     { text: 'Enterprise', href: '#' },
-    //     { text: 'Customer stories', href: '#' },
-    //     { text: 'Pricing', href: '#' },
-    //     { text: 'Resources', href: '#' },
-    //   ],
-    // },
     {
-      title: 'Support',
+      title: 'About',
       links: [
-        { text: 'Contact', href: 'mailto:wildnature.rop@gmail.com' },
-        // { text: 'Docs', href: '#' },
-        // { text: 'Community Forum', href: '#' },
-        // { text: 'Professional Services', href: '#' },
-        // { text: 'Skills', href: '#' },
-        // { text: 'Status', href: '#' },
+        { text: 'Our Story', href: '#' },
+        { text: 'Team', href: '#' },
+        { text: 'Testimonials', href: '#' },
       ],
     },
-    // {
-    //   title: 'Company',
-    //   links: [
-    //     { text: 'About', href: '#' },
-    //     { text: 'Blog', href: '#' },
-    //     { text: 'Careers', href: '#' },
-    //     { text: 'Press', href: '#' },
-    //     { text: 'Inclusion', href: '#' },
-    //     { text: 'Social Impact', href: '#' },
-    //     { text: 'Shop', href: '#' },
-    //   ],
-    // },
+    {
+      title: 'Programs',
+      links: [
+        { text: 'Rites of Passage', href: '#' },
+        { text: 'Youth Programs', href: '#' },
+        { text: 'Adult Programs', href: '#' },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { text: 'FAQ', href: '#' },
+        { text: 'Packing List', href: '#' },
+        { text: 'Safety', href: '#' },
+      ],
+    },
+    {
+      title: 'Contact',
+      links: [{ text: 'Email Us', href: 'mailto:wildnature.rop@gmail.com' }],
+    },
   ],
-  // secondaryLinks: [
-  //   // { text: 'Terms', href: getPermalink('/terms') },
-  //   // { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  // ],
-  // socialLinks: [
-  //   // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-  //   // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-  //   // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-  //   // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-  //   // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-  // ],
-  // footNote: `
-  //   <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-  //   Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  // `,
+  secondaryLinks: [
+    { text: 'Terms', href: '#' },
+    { text: 'Privacy Policy', href: '#' },
+  ],
+  socialLinks: [
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+  ],
+  footNote: `
+    <span>
+      ${new Date().getFullYear()} WildNature Rites of Passage. All rights reserved.
+    </span>
+  `,
 };
