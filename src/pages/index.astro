@@ -14,7 +14,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-<!-- These are buttons that should go back into <Hero 
+  <!-- These are buttons that should go back into <Hero 
   actions={[
     {
       variant: 'primary',
@@ -27,10 +27,7 @@ const metadata = {
   ]} 
   -->
 
-  <Hero
-    
-    image={{ src: '~/assets/images/wildnature/photos/Rites-103.jpg', alt: 'WildNature Rites of Passage 2016' }}
-  >
+  <Hero image={{ src: '~/assets/images/wildnature/photos/Rites-103.jpg', alt: 'WildNature Rites of Passage 2016' }}>
     <Fragment slot="title"> WildNature - Rites of Passage </Fragment>
 
     <Fragment slot="subtitle">
@@ -41,7 +38,7 @@ const metadata = {
   </Hero>
 
   <!-- Note Widget ******************* -->
-<!-- 
+  <!-- 
   <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" /> -->
 
   <!-- Features Widget *************** -->
@@ -376,13 +373,12 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      Are you interested in an adventure of a lifetime?
-    </Fragment>
+    <Fragment slot="title"> Are you interested in an adventure of a lifetime? </Fragment>
 
     <Fragment slot="subtitle">
-      Join us for the 2025 Rites of Passage and experience the wilderness like never before. <br class="hidden md:inline" />Don't
-      miss this opportunity to connect with nature and challenge yourself to new heights.
+      Join us for the 2025 Rites of Passage and experience the wilderness like never before. <br
+        class="hidden md:inline"
+      />Don't miss this opportunity to connect with nature and challenge yourself to new heights.
     </Fragment>
   </CallToAction>
 </Layout>
