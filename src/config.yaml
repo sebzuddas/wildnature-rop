@@ -11,7 +11,7 @@ metadata:
   title:
     default: WildNature Rites of Passage
     template: '%s — WildNature Rites of Passage'
-  description: "WildNature Rites of Passage"
+  description: 'WildNature Rites of Passage'
   robots:
     index: true
     follow: true
