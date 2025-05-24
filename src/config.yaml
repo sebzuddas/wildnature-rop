@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Wildnature Rites of Passage
+  site: 'https://www.wildnature-rop.com'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: WildNature Rites of Passage
+    template: '%s — WildNature Rites of Passage'
+  description: "WildNature Rites of Passage"
   robots:
     index: true
     follow: true
