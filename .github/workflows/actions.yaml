@@ -25,8 +25,20 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
-      - run: npm run check
+      - name: Install dependencies
+        run: npm ci
+      - name: Format with Prettier
+        run: npx prettier --write .
+      - name: Check for uncommitted changes after formatting
+        id: git-check
+        run: |
+          git diff --quiet && git diff --staged --quiet || (
+            echo '::error::Some files were automatically formatted. Please commit these changes.'
+            git status
+            exit 1
+          )
+      - name: Run checks
+        run: npm run check
 
   # Build and deploy job
   build-and-deploy:
