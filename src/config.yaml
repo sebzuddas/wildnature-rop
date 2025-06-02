@@ -66,12 +66,8 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-<<<<<<< HEAD
       id: 'G-WJDHL81HEV' # or "G-XXXXXXXXXX"
-=======
-      id: 'G-WJDHL81HEV'
-      partytown: true # or "G-XXXXXXXXXX"
->>>>>>> sandbox
+      partytown: true
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
