@@ -51,9 +51,28 @@ const metadata = {
     <Fragment slot="title"> Are you interested in an adventure of a lifetime? </Fragment>
 
     <Fragment slot="subtitle">
-      Join us for the 2026 Rites of Passage and experience the wilderness like never before. <br
+      Join us for the {new Date().getFullYear()} Rites of Passage and experience the wilderness like never before. <br
         class="hidden md:inline"
       />Don't miss this opportunity to connect with nature and challenge yourself to new heights.
+    </Fragment>
+  </CallToAction>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Apply to be a Volunteer',
+        href: 'https://forms.gle/uo3rSZeCSwCdjKz79',
+        target: '_blank',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Are you interested in staffing a camp? </Fragment>
+
+    <Fragment slot="subtitle">
+      Apply to be a volunteer for the {new Date().getFullYear()} Rites of Passage camp. <br
+        class="hidden md:inline"
+      />Don't miss this opportunity to support the next generation on their journey of self-discovery.
     </Fragment>
   </CallToAction>
 
