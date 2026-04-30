@@ -7,16 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--aw-color-primary, #2F855A)',
-        secondary: 'var(--aw-color-secondary, #2B6CB0)',
-        accent: 'var(--aw-color-accent, #D69E2E)',
+        primary: 'var(--aw-color-primary, #633806)',
+        secondary: 'var(--aw-color-secondary, #3B6D11)',
+        accent: 'var(--aw-color-accent, #FAC775)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        bark: '#2C2C2A',
+        ember: '#633806',
+        firelight: '#FAC775',
+        'oak-leaf': '#3B6D11',
+        'deep-water': '#085041',
+        'dawn-mist': '#D3D1C7',
+        parchment: '#F1EFE8',
       },
       fontFamily: {
-        sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
-        serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
-        heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
+        sans: ['DM Sans', 'var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
+        serif: ['EB Garamond', 'var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
+        heading: ['Cormorant Garamond', 'var(--aw-font-heading, ui-serif)', ...defaultTheme.fontFamily.serif],
       },
 
       animation: {

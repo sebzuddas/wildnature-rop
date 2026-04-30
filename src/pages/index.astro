@@ -1,10 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-// import Features from '~/components/widgets/Features.astro';
+import Features from '~/components/widgets/Features.astro';
 
 const metadata = {
   title: 'WildNature Rites of Passage',
@@ -13,27 +12,16 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <!-- These are buttons that should go back into <Hero 
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      target: '_blank',
-      icon: 'tabler:download',
-    },
-    { text: 'Learn more', href: '#features' },
-  ]} 
-  -->
-
   <Hero image={{ src: '~/assets/images/wildnature/photos/Rites-103.jpg', alt: 'WildNature Rites of Passage 2016' }}>
-    <Fragment slot="title"> Wildnature Rites of Passage </Fragment>
+    <Fragment slot="title">
+      <span class="font-heading italic font-light tracking-wide">Wildnature</span><br />
+      <span class="font-heading font-semibold">Rites of Passage</span>
+    </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">The Wilderness</span> is coming soon...
+      <span class="hidden sm:inline font-serif text-lg leading-relaxed text-bark dark:text-dawn-mist">
+        The solidity of the earth beneath you. The sun moving across the sky.<br class="hidden md:inline" />
+        The morning after your first night alone — in the shelter you built with your own hands.
       </span>
     </Fragment>
   </Hero>
@@ -42,317 +30,71 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Register Now for 2026',
+        text: `Register Now for ${new Date().getFullYear()}`,
         href: 'https://forms.gle/F66BmNPuSk3nsiXaA',
         target: '_blank',
       },
     ]}
   >
-    <Fragment slot="title"> Are you interested in an adventure of a lifetime? </Fragment>
+    <Fragment slot="title">
+      <span class="font-heading">An adventure of a lifetime awaits</span>
+    </Fragment>
 
     <Fragment slot="subtitle">
-      Join us for the {new Date().getFullYear()} Rites of Passage and experience the wilderness like never before. <br
+      Join us for the {new Date().getFullYear()} Rites of Passage — five days in the ancient woodland near Malmesbury.<br
         class="hidden md:inline"
-      />Don't miss this opportunity to connect with nature and challenge yourself to new heights.
+      />
+      Fire. Shelter. Knife. Night. Dawn. Belonging.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-deep-water dark:bg-bark"></div>
     </Fragment>
   </CallToAction>
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Apply to be a Volunteer',
-        href: 'https://forms.gle/uo3rSZeCSwCdjKz79',
-        target: '_blank',
-      },
-    ]}
-  >
-    <Fragment slot="title"> Are you interested in staffing a camp? </Fragment>
-
-    <Fragment slot="subtitle">
-      Apply to be a volunteer for the {new Date().getFullYear()} Rites of Passage camp. <br
-        class="hidden md:inline"
-      />Don't miss this opportunity to support the next generation on their journey of self-discovery.
-    </Fragment>
-  </CallToAction>
-
-  <!-- Note Widget ******************* -->
-  <!-- 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" /> -->
-
-  <!-- Features Widget *************** -->
-
-  <!-- <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  /> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+  <Features
+    id="where-you"
+    title="The Camp Where You"
+    classes={{
+      container: 'max-w-6xl',
+      title: 'font-heading text-4xl md:text-5xl font-semibold tracking-wide',
     }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Learn real skills',
+        description:
+          'Fire-making, shelter-building, knife craft, and cooking over an open flame. Not as activities on a timetable — as things that matter, things that take practice and patience to get right.',
+        icon: 'tabler:tree',
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Spend time with good men',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Our mentors are experienced, vetted, and trained. They are not performers or motivational speakers. They are people who show up, tell the truth, and know how to be with a young person who is struggling.',
+        icon: 'tabler:campfire',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Go out alone',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          'At the midpoint of camp, every participant spends a night in the shelter they have built. No phone. No noise. No one telling him what to think. He comes back the next morning having done something real.',
+        icon: 'tabler:tent',
       },
       {
-        title: 'Integration of media',
+        title: 'Come home changed',
         description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          'An independent evaluation found significant and lasting change in the boys who attended: greater confidence, stronger friendships, and a renewed sense of who they are. Parents noticed the difference too — and said it lasted.',
+        icon: 'tabler:spiral',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+  />
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
- -->
-  <!-- Steps Widget ****************** -->
-
-  <!-- <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  /> -->
-
-  <!-- Features2 Widget ************** -->
-
-  <!-- <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2> -->
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <!-- <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  /> -->
-
-  <!-- FAQs Widget ******************* -->
   <FAQs
     id="faqs"
     title="FAQs"
     columns={2}
+    classes={{
+      container: 'max-w-6xl',
+      title: 'font-heading text-4xl md:text-5xl font-semibold',
+    }}
     items={[
       {
         title: 'What is the Rites of Passage program about?',
@@ -387,7 +129,7 @@ const metadata = {
       {
         title: 'How do I register?',
         description:
-          'You can register through our website by clicking the "Register Now" button at the top of the page.',
+          'Register directly using <a href="https://forms.gle/F66BmNPuSk3nsiXaA" target="_blank" rel="noopener noreferrer" class="underline hover:text-ember transition-colors">this form</a>.',
       },
       {
         title: 'What safety measures are in place?',
@@ -397,29 +139,22 @@ const metadata = {
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <!-- <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  /> -->
-
-  <!-- CallToAction Widget *********** -->
-
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Click here to watch the trailer',
+        text: 'Watch the trailer',
         href: 'https://youtu.be/fNtpOzNT_JE',
         target: '_blank',
       },
     ]}
   >
-    <Fragment slot="title"> Want to see more? </Fragment>
+    <Fragment slot="title">
+      <span class="font-heading">Want to see more?</span>
+    </Fragment>
   </CallToAction>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-ember dark:bg-bark"></div>
+  </Fragment>
 </Layout>

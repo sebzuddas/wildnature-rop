@@ -1,78 +1,77 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Get in Touch',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
+  <HeroText
+    tagline="Contact"
+    title="Get in Touch"
+    subtitle="Whether you're a parent wondering if this is right for your son, a school exploring a partnership, or someone who wants to know more, the door is open."
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="We are here to help!"
+    title="We can help with"
+    columns={3}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
+        title: 'Registration and places',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Programme dates, places, and booking information for the current year.',
+        icon: 'tabler:calendar',
       },
       {
-        title: 'Technical support',
+        title: 'Concessionary places',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Cost should not be a barrier. Talk to us about what\'s possible.',
+        icon: 'tabler:hand-stop',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'Volunteering and mentoring',
+        description:
+          'If you want to be part of the team, we\'d like to hear from you.',
+        icon: 'tabler:campfire',
       },
+      {
+        title: 'Schools and community partnerships',
+        description:
+          'We work with schools, youth organisations, and community groups. Let\'s talk.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Press and funding enquiries',
+        description:
+          'Journalists, trusts, and foundations are welcome to get in touch.',
+        icon: 'tabler:news',
+      },
+      {
+        title: 'Anything else',
+        description:
+          'We read every message and aim to come back to you within 5 working days.',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Contact us"
+    tagline="Reach us directly"
+    columns={2}
+    items={[
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: '<a href="mailto:wildnature.rop@gmail.com" class="underline hover:text-ember transition-colors">wildnature.rop@gmail.com</a>',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Response time',
+        description: 'We read every message and aim to come back to you within 5 working days. If your son is ready, or if you just want a conversation first, we\'re here.',
+        icon: 'tabler:clock',
       },
     ]}
   />

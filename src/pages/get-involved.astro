@@ -1,0 +1,143 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Get Involved',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Get involved"
+    title="This work happens because people show up for it."
+    subtitle="If you want to be one of them, here's how."
+  />
+
+  <Steps2
+    title="Volunteer as a mentor"
+    subtitle="Our volunteer mentors are the core of every camp. You don't need to be a wilderness expert or a qualified therapist. You need to be honest, good with young people, and willing to be present for a week in the woods."
+    callToAction={{
+      text: 'Apply to volunteer',
+      href: 'https://forms.gle/uo3rSZeCSwCdjKz79',
+      target: '_blank',
+    }}
+    items={[
+      {
+        title: 'Pre-camp preparation',
+        description:
+          'Attending pre-camp training and safeguarding briefings. You\'ll know what to expect and what\'s expected of you before you arrive.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Show up as yourself',
+        description:
+          'Not performing, not fixing, not lecturing. Working alongside experienced programme leaders and being available to young people across the full five days of camp.',
+        icon: 'tabler:campfire',
+      },
+      {
+        title: 'What you\'ll receive',
+        description:
+          'Structured preparation, clear expectations, experienced supervision, and the kind of week that\'s hard to explain to people who weren\'t there.',
+        icon: 'tabler:heart',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Work with us"
+    subtitle="We're always interested in people who combine practical skill with genuine presence — outdoor education, first aid, facilitation, youth work."
+    columns={2}
+    items={[
+      {
+        title: 'Induction into our approach',
+        description:
+          'Everyone who works with Wildnature is inducted into our approach, policies, and values before working with young people. Equality and inclusion are built into how we operate.',
+        icon: 'tabler:door-enter',
+      },
+      {
+        title: 'Demanding and meaningful',
+        description:
+          'If you\'re looking for work that\'s demanding and genuinely meaningful, we\'d like to hear from you. Get in touch via the contact page.',
+        icon: 'tabler:star',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Partner with us"
+    subtitle="We work with schools, community organisations, landowners, and other charities that care about young people and the natural world."
+    columns={3}
+    items={[
+      {
+        title: 'Schools and youth organisations',
+        description:
+          'If your organisation works with boys aged 13–17, or supports outdoor or experiential learning, let\'s talk.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Landowners',
+        description:
+          'If you hold land that could serve this work, we\'d like to hear from you. We approach every partnership as a real collaboration, not a referral arrangement.',
+        icon: 'tabler:trees',
+      },
+      {
+        title: 'Other charities',
+        description:
+          'We are open to co-delivery arrangements with organisations whose values and approach align with ours.',
+        icon: 'tabler:heart-handshake',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="Training"
+    isReversed={true}
+    subtitle="Everyone who works or volunteers with Wildnature receives thorough preparation."
+    items={[
+      {
+        title: 'Safeguarding, health and safety, risk management',
+        description:
+          'Every team member receives training in safeguarding, health and safety, and risk management, plus a thorough induction into our approach. This is mandatory, not optional.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Ongoing learning',
+        description:
+          'We run regular team learning sessions, reflective practice, and annual reviews. We think the best guides are always still learning — and we build that expectation into the culture from the start.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Apply to volunteer',
+        href: 'https://forms.gle/uo3rSZeCSwCdjKz79',
+        target: '_blank',
+      },
+      {
+        variant: 'secondary',
+        text: 'Get in touch',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="font-heading">Ready to show up?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We're looking for people who are grounded, dependable, and genuinely interested in young people.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-ember dark:bg-bark"></div>
+    </Fragment>
+  </CallToAction>
+</Layout>

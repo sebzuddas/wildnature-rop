@@ -1,0 +1,145 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Fund and Support Wildnature',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Support us"
+    title="Fund and Support Wildnature"
+    subtitle="Wildnature exists to make a particular experience available to boys who need it: five days in woodland, real skills, honest company, and a night alone that belongs entirely to them."
+  />
+
+  <Features2
+    title="What the evidence shows"
+    subtitle="An independent evaluation (University of Brighton, 2016) found significant and lasting positive change across three areas."
+    columns={3}
+    items={[
+      {
+        title: 'A renewed connection with the natural world',
+        description:
+          'Boys who came out of the woodland re-engaged with the natural world. That relationship doesn\'t disappear when camp ends.',
+        icon: 'tabler:trees',
+      },
+      {
+        title: 'Deeper peer relationships',
+        description:
+          'A stronger sense of belonging. Friendships built on shared difficulty and honest company, not performance or status.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Growing confidence through practical challenge',
+        description:
+          'Greater confidence through real skill — not told they were capable, but having found it themselves. Parents described sons who came home more mature, more grounded, and more open.',
+        icon: 'tabler:flame',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="How we're funded"
+    subtitle="Every pound we receive goes toward the quality, safety, and reach of the work. We do not exist for private profit."
+    items={[
+      {
+        title: 'Programme fees',
+        description:
+          'Camp fees fund the core running of every programme — mentors, equipment, food, and safeguarding infrastructure.',
+      },
+      {
+        title: 'Grants',
+        description:
+          'We welcome conversations with trusts and foundations whose priorities align with youth development, outdoor education, mental health, or community benefit.',
+      },
+      {
+        title: 'Concessionary places',
+        description:
+          'Concessionary places ensure that cost is not a barrier to the families who need it most. Individual and organisational donations fund these directly.',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Your confidence as a funder"
+    subtitle="Wildnature Rites of Passage CIC is a Community Interest Company, regulated by the CIC Regulator and bound by an asset lock."
+    columns={2}
+    items={[
+      {
+        title: 'Asset locked',
+        description:
+          'Our assets and any surplus are permanently committed to community benefit. They cannot be extracted for private use.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Transparent governance',
+        description:
+          'Our governance is transparent. Our policies are robust. Our founders carry specific legal responsibility for protecting the ethos and integrity of the organisation.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Ways to support"
+    columns={2}
+    items={[
+      {
+        title: 'Grant funding',
+        description:
+          'We welcome conversations with trusts and foundations whose priorities align with youth development, outdoor education, mental health, or community benefit.',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'Individual giving',
+        description:
+          'Donations of any size go directly to programme delivery, concessionary places, and staff training. No donation is too small to matter.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Partnerships',
+        description:
+          'Schools, youth organisations, and community groups are welcome to explore referral or co-delivery arrangements.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Volunteering',
+        description:
+          'Experienced outdoor educators and mentors may be invited to join our mentor community. See our Get Involved page for details.',
+        icon: 'tabler:campfire',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in touch',
+        href: '/contact',
+      },
+      {
+        variant: 'secondary',
+        text: 'Get involved',
+        href: '/get-involved',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="font-heading">Begin a conversation</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      None of this happens without investment — in trained mentors, safeguarding infrastructure, good equipment, and the ongoing care that makes the work possible season after season.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-bark dark:bg-deep-water"></div>
+    </Fragment>
+  </CallToAction>
+</Layout>

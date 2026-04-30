@@ -1,63 +1,74 @@
 ---
-import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/400-italic.css';
+import '@fontsource/cormorant-garamond/600.css';
+import '@fontsource/cormorant-garamond/700.css';
+import '@fontsource/eb-garamond/400.css';
+import '@fontsource/eb-garamond/500.css';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
 ---
 
 <style is:inline>
   :root {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-sans: 'DM Sans';
+    --aw-font-serif: 'EB Garamond';
+    --aw-font-heading: 'Cormorant Garamond';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Brand palette */
+    --wn-bark: #2C2C2A;
+    --wn-oak-leaf: #3B6D11;
+    --wn-ember: #633806;
+    --wn-firelight: #FAC775;
+    --wn-deep-water: #085041;
+    --wn-dawn-mist: #D3D1C7;
+    --wn-parchment: #F1EFE8;
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-primary: #633806;
+    --aw-color-secondary: #3B6D11;
+    --aw-color-accent: #FAC775;
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-text-heading: #2C2C2A;
+    --aw-color-text-default: #2C2C2A;
+    --aw-color-text-muted: #6b6860;
+    --aw-color-bg-page: #F1EFE8;
+    --aw-color-bg-page-dark: #2C2C2A;
 
     ::selection {
-      background-color: lavender;
+      background-color: #FAC775;
+      color: #2C2C2A;
     }
   }
 
   .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-color-primary: #FAC775;
+    --aw-color-secondary: #3B6D11;
+    --aw-color-accent: #633806;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
-
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: #F1EFE8;
+    --aw-color-text-default: #D3D1C7;
+    --aw-color-text-muted: rgb(211 209 199 / 66%);
+    --aw-color-bg-page: #2C2C2A;
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: #633806;
+      color: #F1EFE8;
     }
+  }
+
+  /* Heading font applied globally */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', ui-serif, Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Body prose uses serif */
+  body {
+    font-family: 'EB Garamond', ui-serif, Georgia, serif;
+  }
+
+  /* UI elements stay sans */
+  nav, button, a.btn, .btn, label, input, select, textarea {
+    font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
   }
 </style>

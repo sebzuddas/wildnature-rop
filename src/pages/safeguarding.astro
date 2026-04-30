@@ -1,0 +1,156 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Safeguarding & Duty of Care',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Safeguarding"
+    title="Safeguarding & Duty of Care"
+    subtitle="Every boy who comes to a Wildnature camp is entrusted to us by his family. That trust is the most important thing we hold."
+  />
+
+  <Features2
+    title="Our approach"
+    subtitle="Wildnature is committed to providing a safe, respectful environment for all participants aged 13–17. Our safeguarding approach is built on three principles."
+    columns={3}
+    items={[
+      {
+        title: 'Every boy has the right to be protected from harm',
+        description:
+          'This is non-negotiable. The welfare of each young person is never one consideration among many. It is the first one.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Safeguarding is everyone\'s responsibility',
+        description:
+          'Not just the designated lead\'s. Every member of staff and every volunteer carries this responsibility throughout every programme.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Good safeguarding starts before camp',
+        description:
+          'In how we recruit, train, and hold ourselves accountable — long before anyone sets foot in the woodland.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="The people responsible"
+    items={[
+      {
+        title: 'Designated Safeguarding Lead',
+        description:
+          'Our DSL holds overall responsibility for implementing our Safeguarding and Child Protection Policy, managing concerns, and maintaining relationships with local safeguarding partners and statutory agencies.',
+        icon: 'tabler:user-shield',
+      },
+      {
+        title: 'Deputy DSL',
+        description:
+          'Supports the DSL role and is available whenever the DSL cannot be reached. Contact details for both are shared with all staff and volunteers before every programme, and are available to parents and carers on request.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Directors',
+        description:
+          'Safeguarding responsibilities are embedded in our governance. Our Directors hold legal and ethical accountability. No significant change to the safeguarding policy can be made without their approval.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="Recruitment and training"
+    isReversed={true}
+    items={[
+      {
+        title: 'Enhanced DBS checks',
+        description:
+          'All staff and volunteers undergo Enhanced DBS checks before working with young people. References are verified, identity confirmed, and safeguarding is a standard part of every interview.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Annual training',
+        description:
+          'Once in role, all team members receive annual safeguarding training, a Code of Conduct briefing, and ongoing supervision. No one works unsupervised with young people.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Agreed ratios maintained',
+        description:
+          'Agreed staff-to-participant ratios are maintained throughout every programme. We do not cut corners on this.',
+        icon: 'tabler:ruler-measure',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Risk and challenge"
+    subtitle="Our camps include activities that are intentionally stretching. These are not risks to be removed. They are the point."
+    columns={2}
+    items={[
+      {
+        title: 'Thorough risk assessment',
+        description:
+          'Each activity is subject to a thorough risk assessment. Dynamic risk assessment continues throughout every camp. Challenge at Wildnature is always held within consent, care, and clear safeguarding oversight.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'First aid and emergency procedures',
+        description:
+          'At least one qualified first aider is present at all times. Emergency procedures are in place and rehearsed. We do not wing this.',
+        icon: 'tabler:first-aid-kit',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Raising a concern"
+    subtitle="If something doesn't feel right — before, during, or after a programme — we want to hear from you."
+    columns={2}
+    items={[
+      {
+        title: 'Internal routes',
+        description:
+          'Concerns can be raised directly with our Designated Safeguarding Lead, through our Complaints Officer, or via our Whistleblowing process. If a concern relates to a young person at immediate risk, we will always refer to statutory agencies without delay.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'External routes',
+        description:
+          'External routes are always available, including the NSPCC Helpline (0808 800 5000) and local authority children\'s services. We will never discourage anyone from using them.',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request our policies',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="font-heading">Full policies available on request</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Full details of our Safeguarding, Complaints, and Whistleblowing policies are available on request.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-deep-water dark:bg-bark"></div>
+    </Fragment>
+  </CallToAction>
+</Layout>
