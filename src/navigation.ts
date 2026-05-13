@@ -31,7 +31,7 @@ export const headerData = {
     {
       variant: 'primary' as const,
       text: 'Register Now',
-      href: 'https://forms.gle/F66BmNPuSk3nsiXaA',
+      href: 'https://tally.so/r/A7Aeq0',
       target: '_blank',
     },
   ],
