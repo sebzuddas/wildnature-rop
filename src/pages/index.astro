@@ -9,21 +9,71 @@ const metadata = {
   title: 'WildNature Rites of Passage',
   ignoreTitleTemplate: true,
 };
+
+const faqs = [
+  {
+    title: 'What is the Rites of Passage program about?',
+    description:
+      'Our Rites of Passage program is a transformative wilderness experience designed to help participants transition through important life stages, through an adventure they will not forget. We help build resilience, connect with nature and community.',
+  },
+  {
+    title: 'Who is this program for?',
+    description:
+      'The program is currently open to young men between ages of 13 and 17. We are currently working on offering bespoke camps to young women as well.',
+  },
+  {
+    title: 'What should I bring with me?',
+    description:
+      "We provide a detailed packing list upon registration. Generally, you'll need weather-appropriate clothing, sturdy footwear, a sleeping bag and a tent.",
+  },
+  {
+    title: 'When is the program?',
+    description:
+      'The program will start on Monday, July 27th, and end on Friday, July 31st, 2026. The program lasts for 5 days and 4 nights.',
+  },
+  {
+    title: 'Where is the program held?',
+    description:
+      'This year, the program will be held near Malmesbury, England. More information will be provided upon registration.',
+  },
+  {
+    title: 'Do I need previous outdoor experience?',
+    description:
+      'No previous outdoor experience is necessary. Our programs are designed to accommodate all skill levels, from beginners to experienced outdoors people.',
+  },
+  {
+    title: 'How do I register?',
+    description:
+      'Register directly using <a href="https://tally.so/r/vGE9Zg" target="_blank" rel="noopener noreferrer" class="underline hover:text-ember transition-colors">this form</a>.',
+  },
+  {
+    title: 'What safety measures are in place?',
+    description:
+      'Safety is our top priority. Our guides are certified in wilderness first aid, and we maintain strict safety protocols. All our staff carry DBS certificates given in 2025, and have extensive experience working with young people.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.title,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.description,
+    },
+  })),
+};
 ---
 
 <Layout metadata={metadata}>
   <Hero image={{ src: '~/assets/images/wildnature/photos/Rites-103.jpg', alt: 'WildNature Rites of Passage 2016' }}>
     <Fragment slot="title">
       <span class="font-heading italic font-light tracking-wide">Wildnature</span><br />
-      <span class="font-heading font-semibold">Rites of Passage</span>
+      <span class="font-heading font-semibold">Your Call to Adventure</span>
     </Fragment>
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline font-serif text-lg leading-relaxed text-bark dark:text-dawn-mist">
-        The solidity of the earth beneath you. The sun moving across the sky.<br class="hidden md:inline" />
-        The morning after your first night alone — in the shelter you built with your own hands.
-      </span>
-    </Fragment>
   </Hero>
 
   <CallToAction
@@ -37,14 +87,15 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      <span class="font-heading">An adventure of a lifetime awaits</span>
+      <span class="font-heading">The adventure of your life awaits</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Join us for the {new Date().getFullYear()} Rites of Passage — five days in the ancient woodland near Malmesbury.<br
+      Join the {new Date().getFullYear()} Rites of Passage <br \>
+      Five days in ancient woodland <br \>
+      In the Cotswolds<br
         class="hidden md:inline"
       />
-      Fire. Shelter. Knife. Night. Dawn. Belonging.
     </Fragment>
 
     <Fragment slot="bg">
@@ -61,25 +112,25 @@ const metadata = {
     }}
     items={[
       {
-        title: 'Learn real skills',
+        title: 'Build Real Survival Skills',
         description:
           'Fire-making, shelter-building, knife craft, and cooking over an open flame. Not as activities on a timetable — as things that matter, things that take practice and patience to get right.',
         icon: 'tabler:tree',
       },
       {
-        title: 'Spend time with good men',
+        title: 'Learn from Experts',
         description:
           'Our mentors are experienced, vetted, and trained. They are not performers or motivational speakers. They are people who show up, tell the truth, and know how to be with a young person who is struggling.',
         icon: 'tabler:campfire',
       },
       {
-        title: 'Go out alone',
+        title: 'Work with Nature',
         description:
           'At the midpoint of camp, every participant spends a night in the shelter they have built. No phone. No noise. No one telling him what to think. He comes back the next morning having done something real.',
         icon: 'tabler:tent',
       },
       {
-        title: 'Come home changed',
+        title: 'Forge Your Own Path',
         description:
           'An independent evaluation found significant and lasting change in the boys who attended: greater confidence, stronger friendships, and a renewed sense of who they are. Parents noticed the difference too — and said it lasted.',
         icon: 'tabler:spiral',
@@ -95,49 +146,10 @@ const metadata = {
       container: 'max-w-6xl',
       title: 'font-heading text-4xl md:text-5xl font-semibold',
     }}
-    items={[
-      {
-        title: 'What is the Rites of Passage program about?',
-        description:
-          'Our Rites of Passage program is a transformative wilderness experience designed to help participants transition through important life stages, build resilience, and connect with nature and community.',
-      },
-      {
-        title: 'Who is this program for?',
-        description:
-          'The program is currently open to young men between ages of 13 and 17. We are currently working on offering bespoke camps to young women as well.',
-      },
-      {
-        title: 'What should I bring with me?',
-        description:
-          "We provide a detailed packing list upon registration. Generally, you'll need weather-appropriate clothing, sturdy footwear, a sleeping bag and a tent.",
-      },
-      {
-        title: 'When is the program?',
-        description:
-          'The program will start on Monday, July 27th, and end on Friday, July 31st, 2026. The program lasts for 5 days and 4 nights.',
-      },
-      {
-        title: 'Where is the program held?',
-        description:
-          'This year, the program will be held near Malmesbury, England. More information will be provided upon registration.',
-      },
-      {
-        title: 'Do I need previous outdoor experience?',
-        description:
-          'No previous outdoor experience is necessary. Our programs are designed to accommodate all skill levels, from beginners to experienced outdoors people.',
-      },
-      {
-        title: 'How do I register?',
-        description:
-          'Register directly using <a href="https://tally.so/r/vGE9Zg" target="_blank" rel="noopener noreferrer" class="underline hover:text-ember transition-colors">this form</a>.',
-      },
-      {
-        title: 'What safety measures are in place?',
-        description:
-          'Safety is our top priority. Our guides are certified in wilderness first aid, and we maintain strict safety protocols. All our staff carry DBS certificates given in 2025, and have extensive experience working with young people.',
-      },
-    ]}
+    items={faqs}
   />
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <CallToAction
     actions={[

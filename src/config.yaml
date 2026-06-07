@@ -1,5 +1,5 @@
 site:
-  name: Wildnature Rites of Passage
+  name: Wildnature 
   site: 'https://www.wildnature-rop.com'
   base: '/'
   trailingSlash: false
@@ -16,11 +16,11 @@ metadata:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Wildnature Rites of Passage
     images:
-      - url: '~/assets/images/default.png'
-        width: 1200
-        height: 628
+      - url: '~/assets/images/logo.png'
+        width: 1024
+        height: 1024
     type: website
   twitter:
     handle: '@onwidget'
