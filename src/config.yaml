@@ -1,5 +1,5 @@
 site:
-  name: Wildnature 
+  name: Wildnature
   site: 'https://www.wildnature-rop.com'
   base: '/'
   trailingSlash: false
