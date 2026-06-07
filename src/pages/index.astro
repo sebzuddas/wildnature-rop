@@ -90,8 +90,8 @@ const faqSchema = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Join the {new Date().getFullYear()} Rites of Passage <br \ />
-      Five days in ancient woodland <br \ />
+      Join the {new Date().getFullYear()} Rites of Passage <br />
+      Five days in ancient woodland <br />
       In the Cotswolds<br class="hidden md:inline" />
     </Fragment>
 
@@ -146,7 +146,7 @@ const faqSchema = {
     items={faqs}
   />
 
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
 
   <CallToAction
     actions={[
